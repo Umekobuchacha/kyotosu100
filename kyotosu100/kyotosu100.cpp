@@ -6,7 +6,15 @@
 using namespace std;
 int main()
 {
-	ExecKnock10();
+	ExecKnock11();
+}
+
+void ExecKnock11(void)
+{
+	for (int i = 0;i < 10;i++)
+	{
+		cout << "Hello World" << endl;
+	}
 }
 
 void ExecKnock10(void)
