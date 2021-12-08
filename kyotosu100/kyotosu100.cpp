@@ -6,8 +6,20 @@
 using namespace std;
 int main()
 {
-	ExecKnock11();
+	ExecKnock12();
 }
+
+void ExecKnock12(void)
+{
+	CDataMng data;
+	data.SafetyInputData("input number: ");
+	int RepeatNum = data.GetData();
+	for (int i = 0;i < RepeatNum;i++)
+	{
+		cout << "Hello World" << endl;
+	}
+}
+
 
 void ExecKnock11(void)
 {
