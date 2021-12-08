@@ -151,9 +151,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CDataMng.cpp" />
     <ClCompile Include="kyotosu100.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CDataMng.h" />
+    <ClInclude Include="Common.h" />
     <ClInclude Include="kyotosu100.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
