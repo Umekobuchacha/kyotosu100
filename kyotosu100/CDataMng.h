@@ -10,5 +10,6 @@ public:
 private:
 	int m_data;
 
+
 };
 

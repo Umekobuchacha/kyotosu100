@@ -6,7 +6,14 @@
 using namespace std;
 int main()
 {
-	ExecKnock09();
+	ExecKnock10();
+}
+
+void ExecKnock10(void)
+{
+	CDataMng data;
+	data.SafetyInputData("input number: ");
+	cout << "absolute value is " << abs(data.GetData()) << endl;
 }
 
 void ExecKnock09(void)
