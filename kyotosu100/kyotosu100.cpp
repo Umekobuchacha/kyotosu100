@@ -6,7 +6,19 @@
 using namespace std;
 int main()
 {
-	ExecKnock13();
+	ExecKnock14();
+}
+
+void ExecKnock14(void)
+{
+	CDataMng data;
+	data.SafetyInputData("input number: ");
+	int FirstNum = data.GetData();
+	for (int i = FirstNum; i >= 0;i--)
+	{
+		cout << i << endl;
+	}
+
 }
 
 void ExecKnock13(void)
