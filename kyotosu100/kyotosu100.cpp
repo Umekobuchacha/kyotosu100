@@ -6,7 +6,23 @@
 using namespace std;
 int main()
 {
-	ExecKnock25();
+	ExecKnock26();
+}
+
+void ExecKnock26(void)
+{
+	CDataMng data;
+	data.SafetyInputData("input number: ");
+	switch (data.GetData())
+	{
+	case 1: cout << "one"; break;
+	case 2: cout << "two"; break;
+	case 3: cout << "three"; break;
+	default:
+		cout << "other";
+		break;
+	}
+
 }
 
 void ExecKnock25(void)
