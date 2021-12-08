@@ -6,17 +6,36 @@
 using namespace std;
 int main()
 {
-	ExecKnock27();
+	ExecKnock28();
+}
+
+void ExecKnock28(void)
+{
+	CDataMng data;
+	data.SafetyInputData("input number: ");
+	if (data.Get() > 0)
+	{
+		int factorial = 1;
+		for (int i = 1;i <= data.Get();i++)
+		{
+			factorial *= i;
+		}
+		cout << factorial;
+	}
+	else
+	{
+		cout << "1";
+	}
 }
 
 void ExecKnock27(void)
 {
 	CDataMng data;
 	data.SafetyInputData("input number: ");
-	if (data.GetData() > 0)
+	if (data.Get() > 0)
 	{
 		int sum = 0;
-		for (int i = 0;i <= data.GetData();i++)
+		for (int i = 0;i <= data.Get();i++)
 		{
 			sum += i;
 		}
@@ -29,7 +48,7 @@ void ExecKnock26(void)
 {
 	CDataMng data;
 	data.SafetyInputData("input number: ");
-	switch (data.GetData())
+	switch (data.Get())
 	{
 	case 1: cout << "one"; break;
 	case 2: cout << "two"; break;
@@ -45,11 +64,11 @@ void ExecKnock25(void)
 {
 	CDataMng data;
 	data.SafetyInputData("input number: ");
-	if (data.GetData() < -10)
+	if (data.Get() < -10)
 	{
 		cout << "range 1";
 	}
-	else if (data.GetData() >= 0)
+	else if (data.Get() >= 0)
 	{
 		cout << "range 3";
 	}
@@ -65,11 +84,11 @@ void ExecKnock24(void)
 {
 	CDataMng data;
 	data.SafetyInputData("input number: ");
-	if ((data.GetData() >= -10) && (data.GetData() < 0))
+	if ((data.Get() >= -10) && (data.Get() < 0))
 	{
 		cout << "OK";
 	}
-	else if (data.GetData() >= 10)
+	else if (data.Get() >= 10)
 	{
 		cout << "OK";
 	}
@@ -85,7 +104,7 @@ void ExecKnock23(void)
 {
 	CDataMng data;
 	data.SafetyInputData("input number: ");
-	if ((data.GetData() >= -5) && (data.GetData() < 10))
+	if ((data.Get() >= -5) && (data.Get() < 10))
 	{
 		cout << "OK";
 	}
@@ -100,7 +119,7 @@ void ExecKnock22(void)
 {
 	CDataMng data;
 	data.SafetyInputData("input number: ");
-	if ((data.GetData() <= -10) || (data.GetData() >= 10))
+	if ((data.Get() <= -10) || (data.Get() >= 10))
 	{
 		cout << "OK";
 	}
@@ -112,7 +131,7 @@ void ExecKnock21(void)
 {
 	CDataMng data;
 	data.SafetyInputData("input number: ");
-	if ((data.GetData() > 5) && (data.GetData() < 20))
+	if ((data.Get() > 5) && (data.Get() < 20))
 	{
 		cout << "OK";
 	}
@@ -125,9 +144,9 @@ void ExecKnock20(void)
 	data1.SafetyInputData("input 1st value: ");
 	data2.SafetyInputData("input 2nd value: ");
 
-	int result1 = data1.GetData() / data2.GetData();
+	int result1 = data1.Get() / data2.Get();
 	cout << "result: " << result1 << endl;
-	cout << "result: " << result1 * data2.GetData() << endl;
+	cout << "result: " << result1 * data2.Get() << endl;
 
 
 }
@@ -158,7 +177,7 @@ void ExecKnock18(void)
 
 	for (int i = 0; i < cArraySize;i++)
 	{
-		Array[i] = data.GetData();
+		Array[i] = data.Get();
 	}
 
 	for (int i = 0; i < cArraySize; i++)
@@ -185,7 +204,7 @@ void ExecKnock16(void)
 	{
 		data.SafetyInputData("input number: ");
 
-		if (data.GetData() == 0) {
+		if (data.Get() == 0) {
 			break;
 		}
 	}
@@ -195,7 +214,7 @@ void ExecKnock15(void)
 {
 	CDataMng data;
 	data.SafetyInputData("input number: ");
-	int EndNum = data.GetData();
+	int EndNum = data.Get();
 	for (int i = 0; i <= EndNum;i += 2)
 	{
 		cout << i << endl;
@@ -207,7 +226,7 @@ void ExecKnock14(void)
 {
 	CDataMng data;
 	data.SafetyInputData("input number: ");
-	int FirstNum = data.GetData();
+	int FirstNum = data.Get();
 	for (int i = FirstNum; i >= 0;i--)
 	{
 		cout << i << endl;
@@ -219,7 +238,7 @@ void ExecKnock13(void)
 {
 	CDataMng data;
 	data.SafetyInputData("input number: ");
-	int EndNum = data.GetData();
+	int EndNum = data.Get();
 	for (int i = 0; i <= EndNum;i++)
 	{
 		cout << i << endl;
@@ -231,7 +250,7 @@ void ExecKnock12(void)
 {
 	CDataMng data;
 	data.SafetyInputData("input number: ");
-	int RepeatNum = data.GetData();
+	int RepeatNum = data.Get();
 	for (int i = 0;i < RepeatNum;i++)
 	{
 		cout << "Hello World" << endl;
@@ -251,18 +270,18 @@ void ExecKnock10(void)
 {
 	CDataMng data;
 	data.SafetyInputData("input number: ");
-	cout << "absolute value is " << abs(data.GetData()) << endl;
+	cout << "absolute value is " << abs(data.Get()) << endl;
 }
 
 void ExecKnock09(void)
 {
 	CDataMng data;
 	data.SafetyInputData("input number: ");
-	if (data.GetData() > 0)
+	if (data.Get() > 0)
 	{
 		cout << "positive" << endl;
 	}
-	else if (data.GetData() < 0)
+	else if (data.Get() < 0)
 	{
 		cout << "negative" << endl;
 	}
@@ -277,7 +296,7 @@ void ExecKnock08(void)
 {
 	CDataMng data;
 	data.SafetyInputData("input number: ");
-	if (data.GetData() > 0)
+	if (data.Get() > 0)
 	{
 		cout << "positive" << endl;
 	}
@@ -287,7 +306,7 @@ void ExecKnock07(void)
 {
 	CDataMng data;
 	data.SafetyInputData("input number: ");
-	if (data.GetData() == 0)
+	if (data.Get() == 0)
 	{
 		cout << "zero" << endl;
 	}
@@ -301,7 +320,7 @@ void ExecKnock06(void)
 {
 	CDataMng data;
 	data.SafetyInputData("input number: ");
-	if (data.GetData() == 0)
+	if (data.Get() == 0)
 	{
 		cout << "zero" << endl;
 	}
@@ -313,10 +332,10 @@ void ExecKnock05(void)
 	data1.SafetyInputData("input 1st number: ");
 	data2.SafetyInputData("input 2ns number: ");
 
-	cout << "和: " << data1.GetData() + data2.GetData() << endl;
-	cout << "差: " << data1.GetData() - data2.GetData() << endl;
-	cout << "積: " << data1.GetData() * data2.GetData() << endl;
-	cout << "商: " << data1.GetData() / data2.GetData() << "余り: " << data1.GetData() % data2.GetData() << endl;
+	cout << "和: " << data1.Get() + data2.Get() << endl;
+	cout << "差: " << data1.Get() - data2.Get() << endl;
+	cout << "積: " << data1.Get() * data2.Get() << endl;
+	cout << "商: " << data1.Get() / data2.Get() << "余り: " << data1.Get() % data2.Get() << endl;
 }
 
 void ExecKnock04(void)

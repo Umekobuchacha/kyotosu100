@@ -21,7 +21,7 @@ int CDataMng::SafetyInputData(const char* outputtxt)
 	return m_data;
 }
 
-int CDataMng::GetData(void)
+int CDataMng::Get(void)
 {
 	return m_data;
 }

@@ -2,6 +2,7 @@
 #include "Common.h"
 
 int main();
+void ExecKnock28(void);
 void ExecKnock27(void);
 void ExecKnock26(void);
 void ExecKnock25(void);
