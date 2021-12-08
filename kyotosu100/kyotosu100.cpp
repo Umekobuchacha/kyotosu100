@@ -6,7 +6,17 @@
 using namespace std;
 int main()
 {
-	ExecKnock07();
+	ExecKnock08();
+}
+
+void ExecKnock08(void)
+{
+	CDataMng data;
+	data.SafetyInputData("input number: ");
+	if (data.GetData() > 0)
+	{
+		cout << "positive" << endl;
+	}
 }
 
 void ExecKnock07(void)
