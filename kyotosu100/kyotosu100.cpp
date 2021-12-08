@@ -7,7 +7,7 @@ using namespace std;
 
 int main()
 {
-	ExecKnock00();
+	ExecKnock01();
 }
 
 
@@ -16,4 +16,7 @@ void ExecKnock00(void)
 	cout << "Hello World";
 }
 
-
+void ExecKnock01(void)
+{
+	cout << "12345 + 23456 = " << 12345 + 23456;
+}
