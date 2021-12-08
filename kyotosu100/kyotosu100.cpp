@@ -6,7 +6,20 @@
 using namespace std;
 int main()
 {
-	ExecKnock19();
+	ExecKnock20();
+}
+
+void ExecKnock20(void)
+{
+	CDataMng data1, data2;
+	data1.SafetyInputData("input 1st value: ");
+	data2.SafetyInputData("input 2nd value: ");
+
+	int result1 = data1.GetData() / data2.GetData();
+	cout << "result: " << result1 << endl;
+	cout << "result: " << result1 * data2.GetData() << endl;
+
+
 }
 
 void ExecKnock19(void)
