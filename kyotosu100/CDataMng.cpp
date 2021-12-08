@@ -2,13 +2,12 @@
 using namespace std;
 int CDataMng::SafetyInputData(const char* outputtxt)
 {
-	int data;
 	cout << outputtxt;
 	cin.exceptions(ios::failbit);
 	while (1)
 	{
 		try {
-			cin >> data;
+			cin >> m_data;
 		}
 		catch (...)
 		{
@@ -19,5 +18,10 @@ int CDataMng::SafetyInputData(const char* outputtxt)
 		}
 		break;
 	}
-	return data;
+	return m_data;
+}
+
+int CDataMng::GetData(void)
+{
+	return m_data;
 }

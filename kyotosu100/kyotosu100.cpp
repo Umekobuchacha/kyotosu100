@@ -6,7 +6,19 @@
 using namespace std;
 int main()
 {
-	ExecKnock04();
+	ExecKnock05();
+}
+
+void ExecKnock05(void)
+{
+	CDataMng data1, data2;
+	data1.SafetyInputData("input 1st number: ");
+	data2.SafetyInputData("input 2ns number: ");
+
+	cout << "和: " << data1.GetData() + data2.GetData() << endl;
+	cout << "差: " << data1.GetData() - data2.GetData() << endl;
+	cout << "積: " << data1.GetData() * data2.GetData() << endl;
+	cout << "商: " << data1.GetData() / data2.GetData() << "余り: " << data1.GetData() % data2.GetData() << endl;
 }
 
 void ExecKnock04(void)

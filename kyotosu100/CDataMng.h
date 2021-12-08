@@ -3,8 +3,12 @@
 class CDataMng
 {
 public:
-	CDataMng(void) {}
-
+	CDataMng(void) : m_data(0) { }
 	int SafetyInputData(const char* outputtxt);
+	int GetData(void);
+
+private:
+	int m_data;
+
 };
 
