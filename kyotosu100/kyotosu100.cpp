@@ -6,8 +6,25 @@
 using namespace std;
 int main()
 {
-	ExecKnock18();
+	ExecKnock19();
 }
+
+void ExecKnock19(void)
+{
+	static const int cArraySize = 5;
+	int Array[cArraySize];
+	CDataMng data;
+
+	for (int i = 0; i < cArraySize;i++)
+	{
+		Array[i] = data.SafetyInputData("input number: ");
+	}
+	for (int i = 0; i < cArraySize; i++)
+	{
+		cout << Array[i] << endl;
+	}
+}
+
 
 void ExecKnock18(void)
 {
