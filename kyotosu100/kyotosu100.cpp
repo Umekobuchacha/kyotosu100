@@ -6,8 +6,21 @@
 using namespace std;
 int main()
 {
-	ExecKnock28();
+	ExecKnock29();
 }
+
+void ExecKnock29(void)
+{
+	static const int repettime = 5;
+	CDataMng data;
+	int sum = 0;
+	for (int i = 0; i < repettime;i++)
+	{
+		sum += data.SafetyInputData("input number: ");
+	}
+	cout << sum;
+}
+
 
 void ExecKnock28(void)
 {
