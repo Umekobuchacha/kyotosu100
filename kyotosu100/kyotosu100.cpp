@@ -6,7 +6,26 @@
 using namespace std;
 int main()
 {
-	ExecKnock30();
+	ExecKnock31();
+}
+
+void ExecKnock31(void)
+{
+	static const int num = 5;
+	CDataMng data;
+	data.SafetyInputData("input number: ");
+	int x5 = data.Get() / num;
+	for (int i = 0;i < x5;i++)
+	{
+		cout << "***** ";
+	}
+	x5 = data.Get() % num;
+	for (int i = 0;i < x5;i++)
+	{
+		cout << "*";
+	}
+
+
 }
 
 void ExecKnock30(void)
