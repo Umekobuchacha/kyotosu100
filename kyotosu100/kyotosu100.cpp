@@ -6,8 +6,28 @@
 using namespace std;
 int main()
 {
-	ExecKnock24();
+	ExecKnock25();
 }
+
+void ExecKnock25(void)
+{
+	CDataMng data;
+	data.SafetyInputData("input number: ");
+	if (data.GetData() < -10)
+	{
+		cout << "range 1";
+	}
+	else if (data.GetData() >= 0)
+	{
+		cout << "range 3";
+	}
+	else
+	{
+		cout << "range 2";
+	}
+
+}
+
 
 void ExecKnock24(void)
 {
