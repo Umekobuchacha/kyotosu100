@@ -6,7 +6,13 @@
 using namespace std;
 int main()
 {
-	ExecKnock02();
+	ExecKnock04();
+}
+
+void ExecKnock04(void)
+{
+	CDataMng data;
+	cout << "answer = " << data.SafetyInputData("input number:") * 3;
 }
 
 void ExecKnock03(void)
