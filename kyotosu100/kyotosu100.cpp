@@ -6,8 +6,21 @@
 using namespace std;
 int main()
 {
-	ExecKnock37();
+	ExecKnock38();
 }
+
+void ExecKnock38(void)
+{
+	int Array[] = { 3,7,0,8,4,1,9,6,5,2 };
+	int first = 0;
+	for (int i = 0;i < 10;i++)
+	{
+		cout << Array[first] << endl;
+		first = Array[first];
+	}
+
+}
+
 void ExecKnock37(void)
 {
 	int Array[] = { 3,7,0,8,4,1,9,6,5,2 };
