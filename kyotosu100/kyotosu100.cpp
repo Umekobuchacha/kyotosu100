@@ -6,7 +6,22 @@
 using namespace std;
 int main()
 {
-	ExecKnock32();
+	ExecKnock33();
+}
+
+void ExecKnock33(void)
+{
+	CDataMng data;
+	data.SafetyInputData("input number: ");
+
+	for (int i = 1;i <= 9;i++)
+	{
+		if (i != data.Get())
+		{
+			cout << i << endl;
+		}
+	}
+
 }
 
 void ExecKnock32(void)
