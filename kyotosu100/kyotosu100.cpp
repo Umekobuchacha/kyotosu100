@@ -6,7 +6,23 @@
 using namespace std;
 int main()
 {
-	ExecKnock39();
+	ExecKnock40();
+}
+
+void ExecKnock40(void)
+{
+	CDataMng data;
+	data.SafetyInputData("input number: ");
+
+	if (data.Get() % 2 == 0)
+	{
+		cout << data.Get() << " is even" << endl;
+	}
+	else
+	{
+		cout << data.Get() << " is odd" << endl;
+	}
+
 }
 
 void ExecKnock39(void)
