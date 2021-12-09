@@ -6,7 +6,30 @@
 using namespace std;
 int main()
 {
-	ExecKnock44();
+	ExecKnock45();
+}
+
+void ExecKnock45(void)
+{
+	CDataMng cKyori, cGaku;
+	int TotalKyori = cKyori.SafetyInputData("距離");
+	static const int firstGaku = 610;
+	static const int lastGaku = 80;
+	static const int firstKyori = 1700;
+	static const int lastKyori = 313;
+
+	int ZanKyori = TotalKyori - firstKyori;
+	int ZanGaku = (ZanKyori / lastKyori)* lastGaku;
+	if ((ZanKyori% lastKyori) != 0)
+	{
+		ZanGaku += lastGaku;
+	}
+
+
+	cout << "金額" << firstGaku + ZanGaku;
+
+
+
 }
 
 void ExecKnock44(void)
