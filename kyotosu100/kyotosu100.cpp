@@ -6,7 +6,18 @@
 using namespace std;
 int main()
 {
-	ExecKnock34();
+	ExecKnock35();
+}
+
+void ExecKnock35(void)
+{
+	int Array[] = { 3,7,0,8,4,1,9,6,5,2 };
+	CDataMng data;
+	data.SafetyInputData("input number: ");
+
+	cout << "Array[" << data.Get() << "] = " << Array[data.Get()] << endl;
+
+
 }
 
 void ExecKnock34(void)
