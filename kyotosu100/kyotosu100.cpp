@@ -6,8 +6,26 @@
 using namespace std;
 int main()
 {
-	ExecKnock40();
+	ExecKnock41();
 }
+
+void ExecKnock41(void)
+{
+	CDataMng data;
+	data.SafetyInputData("input number: ");
+
+	if ((0 < data.Get()) && (data.Get() < 10))
+	{
+		cout << data.Get() << " is a single figure" << endl;
+	}
+	else
+	{
+		cout << data.Get() << " is not a single figure" << endl;
+	}
+
+
+}
+
 
 void ExecKnock40(void)
 {
