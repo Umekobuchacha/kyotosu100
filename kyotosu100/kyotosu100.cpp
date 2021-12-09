@@ -6,7 +6,30 @@
 using namespace std;
 int main()
 {
-	ExecKnock42();
+	ExecKnock43();
+}
+
+void ExecKnock43(void)
+{
+	CDataMng data1, data2, data3;
+	int a = data1.SafetyInputData("input number a: ");
+	int b = data2.SafetyInputData("input number b: ");
+	int c = data3.SafetyInputData("input number c: ");
+
+	int D = (b*b) - (4 * a*c);
+
+	if (D > 0)
+	{
+		cout << "２つの実数解";
+	}
+	else if (D < 0)
+	{
+		cout << "２つの虚数解";
+	}
+	else
+	{
+		cout << "重解";
+	}
 }
 
 void ExecKnock42(void)
