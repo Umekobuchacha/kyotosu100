@@ -6,7 +6,22 @@
 using namespace std;
 int main()
 {
-	ExecKnock31();
+	ExecKnock32();
+}
+
+void ExecKnock32(void)
+{
+	for (int i = 1;i <= 20;i++)
+	{
+		if (i % 5 == 0)
+		{
+			cout << "bar" << endl;
+		}
+		else
+		{
+			cout << i << endl;
+		}
+	}
 }
 
 void ExecKnock31(void)
