@@ -6,7 +6,17 @@
 using namespace std;
 int main()
 {
-	ExecKnock43();
+	ExecKnock44();
+}
+
+void ExecKnock44(void)
+{
+	CDataMng cYen, cDoll;
+	int Yen = cYen.SafetyInputData("何円？: ");
+	int Doll = cDoll.SafetyInputData("1ドルは何円？: ");
+
+	cout << Yen << "円は" << Yen / Doll << "ドル" << ((Yen % Doll) * 100) / Doll << "セント";
+
 }
 
 void ExecKnock43(void)
