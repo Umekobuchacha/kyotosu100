@@ -6,7 +6,21 @@
 using namespace std;
 int main()
 {
-	ExecKnock46();
+	ExecKnock47();
+}
+
+void ExecKnock47(void)
+{
+	CDataMng data1, data2, data3;
+	int a = data1.SafetyInputData("input a: ");
+	int b = data2.SafetyInputData("input b: ");
+
+	int tmp = a;
+	a = b;
+	b = tmp;
+
+	cout << "a = " << a << " b = " << b;
+
 }
 
 void ExecKnock46(void)
