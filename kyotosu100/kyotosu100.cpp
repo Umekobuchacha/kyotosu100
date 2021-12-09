@@ -6,7 +6,32 @@
 using namespace std;
 int main()
 {
-	ExecKnock45();
+	ExecKnock46();
+}
+
+void ExecKnock46(void)
+{
+	static const int num1 = 600;
+	static const int num5to19 = 550;
+	static const int numover20 = 500;
+
+	CDataMng cNinzu;
+	int Ninzu = cNinzu.SafetyInputData("人数 ");
+	int Gaku;
+	if ((1 <= Ninzu) && (Ninzu < 5))
+	{
+		Gaku = num1;
+	}
+	else if ((5 <= Ninzu) && (Ninzu < 20))
+	{
+		Gaku = num5to19;
+	}
+	else
+	{
+		Gaku = numover20;
+	}
+
+	cout << "料金" << Gaku * Ninzu;
 }
 
 void ExecKnock45(void)
