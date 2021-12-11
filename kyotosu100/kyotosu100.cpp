@@ -8,8 +8,23 @@ using namespace std;
 
 int main()
 {
-	ExecKnock48();
+	ExecKnock49();
 }
+
+void ExecKnock49(void)
+{
+	for (int i = 1;i <= 9;i++)
+	{
+		for (int j = 1;j <= 9;j++)
+		{
+			cout << i * j << "\t";
+		}
+		cout << endl;
+	}
+
+}
+
+
 void ExecKnock48(void)
 {
 	CDataMng data;
