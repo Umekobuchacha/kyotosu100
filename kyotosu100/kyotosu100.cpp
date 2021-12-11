@@ -8,7 +8,28 @@ using namespace std;
 
 int main()
 {
-	ExecKnock49();
+	ExecKnock50();
+}
+
+void ExecKnock50(void)
+{
+	for (int i = 1;i <= 100;i++)
+	{
+		if (i % 3 == 0)
+		{
+			cout << "foo";
+		}
+		if (i % 5 == 0)
+		{
+			cout << "bar";
+		}
+		if ((i % 3 != 0) && (i % 5 != 0))
+		{
+			cout << i;
+		}
+		cout << endl;
+	}
+
 }
 
 void ExecKnock49(void)
