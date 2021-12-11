@@ -8,7 +8,35 @@ using namespace std;
 
 int main()
 {
-	ExecKnock52();
+	ExecKnock53();
+}
+
+
+void ExecKnock53(void)
+{
+	CDataMng data;
+	int num = data.SafetyInputData("input number: ");
+	int waru = 2;
+
+	while (1)
+	{
+		if (num%waru == 0)
+		{
+			num /= waru;
+			cout << waru << " ";
+			continue;
+		}
+		else
+		{
+			waru++;
+		}
+
+		if (num == 1)
+		{
+			break;
+		}
+	}
+
 }
 
 void ExecKnock52(void)
