@@ -8,7 +8,23 @@ using namespace std;
 
 int main()
 {
-	ExecKnock51();
+	ExecKnock52();
+}
+
+void ExecKnock52(void)
+{
+	CDataMng data;
+	int Year = data.SafetyInputData("input Year: ");
+
+	if ((Year % 400 == 0) || ((Year % 4 == 0) && (Year % 100 != 0)))
+	{
+		cout << Year << "年は閏年である";
+	}
+	else
+	{
+		cout << Year << "年は閏年でない";
+	}
+
 }
 
 
