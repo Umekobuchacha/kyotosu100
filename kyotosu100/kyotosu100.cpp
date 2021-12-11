@@ -8,8 +8,29 @@ using namespace std;
 
 int main()
 {
-	ExecKnock50();
+	ExecKnock51();
 }
+
+
+void ExecKnock51(void)
+{
+	CDataMng data;
+	int Gaku = data.SafetyInputData("input money: ");
+	int Y100, Y_10, Y__1;
+
+	Y100 = Gaku / 100;
+	Y_10 = (Gaku - Y100 * 100) / 10;
+	Y__1 = (Gaku - Y100 * 100 - Y_10 * 10);
+
+
+	cout << "100円玉" << Y100 << "枚, ";
+	cout << "10円玉" << Y_10 << "枚, ";
+	cout << "1円玉" << Y__1 << "枚";
+
+
+}
+
+
 
 void ExecKnock50(void)
 {
