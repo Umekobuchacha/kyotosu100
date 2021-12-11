@@ -2,12 +2,42 @@
 //
 #include "kyotosu100.h"
 #include "CDataMng.h"
+#include "CMath.h"
 
 using namespace std;
+
 int main()
 {
-	ExecKnock47();
+	ExecKnock48();
 }
+void ExecKnock48(void)
+{
+	CDataMng data;
+	int num = data.SafetyInputData("input number: ");
+	int loopcnt = 1;
+	CMath Math;
+
+	while (1)
+	{
+		if (Math.IsEven(num))
+		{
+			num /= 2;
+		}
+		else {
+			num = num * 3 + 1;
+		}
+
+		cout << loopcnt << ": " << num << endl;
+
+		if (num == 1)
+		{
+			break;
+		}
+		loopcnt++;
+	}
+}
+
+
 
 void ExecKnock47(void)
 {
