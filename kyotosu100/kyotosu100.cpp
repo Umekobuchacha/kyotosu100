@@ -8,7 +8,17 @@ using namespace std;
 
 int main()
 {
-	ExecKnock53();
+	ExecKnock54();
+}
+
+void ExecKnock54(void)
+{
+	CManyDataMng cData;
+	cData.InputData();
+
+	cout << "最小値 = " << cData.GetMin() << ", ";
+	cout << "最大値 = " << cData.GetMax();
+
 }
 
 

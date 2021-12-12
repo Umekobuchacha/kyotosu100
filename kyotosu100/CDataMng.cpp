@@ -25,3 +25,49 @@ int CDataMng::Get(void)
 {
 	return m_data;
 }
+
+void CManyDataMng::InputData()
+{
+	// データの個数を読み込む
+	scanf_s("%d", &m_numData);
+
+	// 本当は、ここでデータの個数をチェックする必要があるが省略
+
+	// データの個数だけ繰り返してデータを読み込む
+	for (int i = 0; i < m_numData; i++)
+	{
+		scanf_s("%d", &m_data[i]);
+	}
+}
+
+void CManyDataMng::GetData(int* data)
+{
+	memcpy(data, m_data, ArraySize);
+}
+
+int CManyDataMng::GetMax()
+{
+	int max = 0;
+	for (int i = 0;i < m_numData;i++)
+	{
+		if (m_data[i] > max)
+		{
+			max = m_data[i];
+		}
+	}
+	return max;
+}
+
+int CManyDataMng::GetMin()
+{
+	int min = m_data[0];
+	for (int i = 0;i < m_numData;i++)
+	{
+		if (m_data[i] < min)
+		{
+			min = m_data[i];
+		}
+	}
+	return min;
+}
+

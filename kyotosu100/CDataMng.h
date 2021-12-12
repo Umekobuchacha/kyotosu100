@@ -1,5 +1,6 @@
 #pragma once
 #include "Common.h"
+#include <array>
 
 
 class CDataMng
@@ -14,10 +15,21 @@ public:
 		return (m_data % 2) ? true : false;
 	}
 
-
 private:
 	int m_data;
-
-
 };
 
+class CManyDataMng
+{
+private:
+	static const int ArraySize = 100;
+	int m_data[ArraySize];
+	int m_numData;
+
+public:
+	void InputData();
+	void GetData(int* data);
+	int GetDataNum() { return m_numData; }
+	int GetMax();
+	int GetMin();
+};
