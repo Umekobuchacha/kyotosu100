@@ -8,7 +8,22 @@ using namespace std;
 
 int main()
 {
-	ExecKnock54();
+	ExecKnock55();
+}
+
+void ExecKnock55(void)
+{
+	for (int all = 0; all < 3;all++) {
+		for (int i = 0;i < 9;i++)
+		{
+			cout << "とんで";
+		}
+		for (int i = 0;i < 3;i++)
+		{
+			cout << "まわって";
+		}
+		cout << "まわる" << endl;
+	}
 }
 
 void ExecKnock54(void)
