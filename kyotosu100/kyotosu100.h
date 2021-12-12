@@ -1,7 +1,9 @@
 #pragma once
 #include "Common.h"
 
+
 int main();
+void ExecKnock56(void);
 void ExecKnock55(void);
 void ExecKnock54(void);
 void ExecKnock53(void);

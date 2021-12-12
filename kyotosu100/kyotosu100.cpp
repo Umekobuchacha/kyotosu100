@@ -8,7 +8,15 @@ using namespace std;
 
 int main()
 {
-	ExecKnock55();
+	ExecKnock56();
+}
+
+void ExecKnock56(void)
+{
+	CDataMng data;
+	int num = data.SafetyInputData("input number: ");
+	cout << bitset<16>(num);
+
 }
 
 void ExecKnock55(void)
