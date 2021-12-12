@@ -3,6 +3,7 @@
 
 
 int main();
+void ExecKnock57(void);
 void ExecKnock56(void);
 void ExecKnock55(void);
 void ExecKnock54(void);

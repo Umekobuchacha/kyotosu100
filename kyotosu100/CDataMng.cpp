@@ -71,3 +71,25 @@ int CManyDataMng::GetMin()
 	return min;
 }
 
+void CTestScore::InputData()
+{
+	cin >> m_numData;
+
+	for (int i = 0; i < m_numData;i++)
+	{
+		cin >> Score[eEnglish][i] >> Score[eMath][i] >> Score[eJapanese][i];
+	}
+
+}
+
+int CTestScore::GetAverage(eSubject sub)
+{
+	int ave = 0;
+	for (int i = 0; i < m_numData;i++)
+	{
+		ave += Score[sub][i];
+	}
+
+	return ave / m_numData;
+
+}

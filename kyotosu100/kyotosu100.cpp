@@ -8,8 +8,23 @@ using namespace std;
 
 int main()
 {
-	ExecKnock56();
+	ExecKnock57();
 }
+
+void ExecKnock57(void)
+{
+	CTestScore cScore;
+	cScore.InputData();
+
+	cout << "平均点 ";
+	cout << "英語:" << cScore.GetAverage(CTestScore::eSubject::eEnglish);
+	cout << ", ";
+	cout << "数学:" << cScore.GetAverage(CTestScore::eSubject::eMath);
+	cout << ", ";
+	cout << "国語:" << cScore.GetAverage(CTestScore::eSubject::eJapanese);
+
+}
+
 
 void ExecKnock56(void)
 {

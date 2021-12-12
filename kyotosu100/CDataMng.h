@@ -33,3 +33,24 @@ public:
 	int GetMax();
 	int GetMin();
 };
+
+class CTestScore
+{
+public:
+	typedef enum {
+		eEnglish,
+		eMath,
+		eJapanese,
+		eScoreMAX,
+	}eSubject;
+
+private:
+	static const int ArraySize = 100;
+	int Score[eScoreMAX][ArraySize];
+	int m_numData;
+
+public:
+	void InputData();
+	int GetAverage(eSubject sub);
+
+};
