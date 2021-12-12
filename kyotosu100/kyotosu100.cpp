@@ -8,7 +8,37 @@ using namespace std;
 
 int main()
 {
-	ExecKnock58();
+	ExecKnock59();
+}
+
+void ExecKnock59(void)
+{
+
+	int input1[3][3];
+	int input2[3][3];
+
+	cout << "1つ目の行列" << endl;
+	for (int i = 0;i < 3;i++) {
+		cin >> input1[i][0] >> input1[i][1] >> input1[i][2];
+	}
+
+	cout << "2つ目の行列" << endl;
+	for (int i = 0;i < 3;i++) {
+		cin >> input2[i][0] >> input2[i][1] >> input2[i][2];
+	}
+
+	cout << "和" << endl;
+	for (int i = 0;i < 3;i++)
+	{
+		for (int j = 0;j < 3;j++)
+		{
+			input1[i][j] += input2[i][j];
+			cout << input1[i][j] << "\t";
+		}
+		cout << endl;
+	}
+
+
 }
 
 void ExecKnock58(void)
