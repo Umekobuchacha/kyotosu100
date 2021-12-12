@@ -8,8 +8,34 @@ using namespace std;
 
 int main()
 {
-	ExecKnock57();
+	ExecKnock58();
 }
+
+void ExecKnock58(void)
+{
+	CArrayDataMng cArray(5);
+	cArray.SafetyInputData("Input data");
+
+	for (int i = 0;i < cArray.GetArraySize();i++)
+	{
+		int data = cArray.GetArrayData(i);
+		cout << data << "\t:";
+
+		int Star5Num = data / 5;
+		int Star1Num = data % 5;
+
+		for (int j = 0; j < Star5Num;j++)
+		{
+			cout << "***** ";
+		}
+		for (int j = 0; j < Star1Num;j++)
+		{
+			cout << "*";
+		}
+		cout << endl;
+	}
+}
+
 
 void ExecKnock57(void)
 {
@@ -51,7 +77,7 @@ void ExecKnock55(void)
 
 void ExecKnock54(void)
 {
-	CManyDataMng cData;
+	CRedirectDataMng cData;
 	cData.InputData();
 
 	cout << "最小値 = " << cData.GetMin() << ", ";

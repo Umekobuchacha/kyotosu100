@@ -26,7 +26,7 @@ int CDataMng::Get(void)
 	return m_data;
 }
 
-void CManyDataMng::InputData()
+void CRedirectDataMng::InputData()
 {
 	// ƒf[ƒ^‚ÌŒÂ”‚ğ“Ç‚İ‚Ş
 	scanf_s("%d", &m_numData);
@@ -40,12 +40,12 @@ void CManyDataMng::InputData()
 	}
 }
 
-void CManyDataMng::GetData(int* data)
+void CRedirectDataMng::GetData(int* data)
 {
 	memcpy(data, m_data, ArraySize);
 }
 
-int CManyDataMng::GetMax()
+int CRedirectDataMng::GetMax()
 {
 	int max = 0;
 	for (int i = 0;i < m_numData;i++)
@@ -58,7 +58,7 @@ int CManyDataMng::GetMax()
 	return max;
 }
 
-int CManyDataMng::GetMin()
+int CRedirectDataMng::GetMin()
 {
 	int min = m_data[0];
 	for (int i = 0;i < m_numData;i++)
@@ -92,4 +92,26 @@ int CTestScore::GetAverage(eSubject sub)
 
 	return ave / m_numData;
 
+}
+
+void CArrayDataMng::SafetyInputData(const char * outputtxt)
+{
+	cin.exceptions(ios::failbit);
+	for (int i = 0;i < m_ArraySize;i++) {
+		cout << outputtxt << "[" << i << "]: ";
+		while (1)
+		{
+			try {
+				cin >> m_ArrayData[i];
+			}
+			catch (...)
+			{
+				cout << "®”‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢:";
+				cin.clear();
+				cin.seekg(0);
+				continue;
+			}
+			break;
+		}
+	}
 }

@@ -19,7 +19,7 @@ private:
 	int m_data;
 };
 
-class CManyDataMng
+class CRedirectDataMng
 {
 private:
 	static const int ArraySize = 100;
@@ -33,6 +33,25 @@ public:
 	int GetMax();
 	int GetMin();
 };
+
+class CArrayDataMng
+{
+public:
+	CArrayDataMng(int size) { m_ArraySize = size; }
+
+private:
+	static const int MaxSize = 100;
+	int m_ArraySize;
+	int m_ArrayData[MaxSize];
+
+public:
+	void SafetyInputData(const char* outputtxt);
+	int GetArraySize() { return m_ArraySize; }
+	int GetArrayData(int num) { return m_ArrayData[num]; }
+};
+
+
+
 
 class CTestScore
 {
